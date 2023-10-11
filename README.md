@@ -3,7 +3,7 @@
   <p align="center"><img src="./assets/teaser.png" alt="teaser" width="600px" /></p>
   <p align="center">
     <a href='https://github.com/jyFengGoGo/InstructDet'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-    <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+    <a href='https://arxiv.org/pdf/2310.05136.pdf'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
   </p>
 </p>
 
@@ -32,7 +32,7 @@ Our diversified referring object detection(DROD) model, visual comparison with [
 @article{dang2023instructdet,
   title={InstructDET: Diversifying Referring Object Detection with Generalized Instructions.},
   author={Dang, Ronghao and Feng, Jiangyan and Zhang, Haodong and Ge, Chongjian and Song, Lin and Gong, Lijun and Liu, Chengju and Chen, Qijun and Zhu, Feng and Zhao, Rui and Song, Yibin},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2310.05136},
   year={2023}
 }
 ```
