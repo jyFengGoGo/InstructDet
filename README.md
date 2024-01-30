@@ -9,7 +9,7 @@
 Our ROD aims to execute diversified user detection instructions compared to visual grounding. For images with object bbxs, we use foundation models to produce human-like object detection instructions. By training a conventional ROD model with incorporating tremendous instructions, we largely push ROD towards practical usage from a data-centric perspective.
 
 ## Release
-- [2024/01/19] The InDET dataset and instruction generation code are released.
+- [2024/01/30] The InDET dataset and instruction generation code are released.
 - [2024/01/16] Our InstructDET [paper](https://arxiv.org/pdf/2310.05136.pdf) has been accepted by ICLR 2024.
 
 ## Demo Video
