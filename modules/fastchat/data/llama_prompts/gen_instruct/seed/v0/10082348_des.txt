@@ -1,0 +1,18 @@
+[man]
+(1) person who is drinking, person in the bathroom, focus of this image
+(2) person who is wearing a baseball cap, person who is wearing a black jacket, person who is holding a coffee mug, person posing next to a urinal, person blocked part of the right urinal, person standing between two urinals, person standing on the right side of the left urinal
+[ball cap/baseball cap]
+(1) cap, hat, the upmost object in the image
+(2) item worn by the man in black jacket, item on the man's head, item worn by the man holding a coffee mug
+[black jacket]
+(1) jacket, black coat
+(2) item worn by the man in baseball cap
+[cup coffee/coffee cup/coffee mug]
+(1) item probably made of ceramic, liquid container
+(2) cup the man is drinking from, item the man holds in his left hand, item the man in black jacket holding in his hand
+[urinals]
+(1) appliance in men's lavatory, items at the bottom of the image
+(2) objects the man standing in between, objects the man in black jacket standing in between, objects the man with a mug standing in between
+[urinal]
+(1) appliance in men's lavatory, objects in a bathroom, the left urinal
+(2) the urinal on the left side of the man, the urinal not blocked by the man holding a cup of coffee

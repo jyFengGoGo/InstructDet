@@ -1,0 +1,4 @@
+Objects and their descriptions:
+## object 2: girl sitting on bed, girl with toy, girl sitting on bed
+## object 3: man looking down, boy sitting on the bed, man sitting on bed
+Please find an summerize the similar properties of given objects.

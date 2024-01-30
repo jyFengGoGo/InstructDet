@@ -1,0 +1,11 @@
+two children , a girl and a boy are practicing their writing .
+Two children sit on a small seesaw in the sand .
+Two children sitting on a teeter totter .
+2 kids playing on a seesaw
+Two kids sit on a seesaw .
+
+2 kids/two kids/two children: [0.09, 0.59, 0.49, 0.94]
+girl: [0.09, 0.59, 0.23, 0.92]
+boy: [0.34, 0.62, 0.49, 0.94]
+seesaw/small seesaw/teeter totter: [0.06, 0.83, 0.57, 0.93]
+sand: [0.01, 0.61, 1.0, 1.0]

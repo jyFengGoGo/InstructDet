@@ -1,0 +1,12 @@
+# python
+__pycache__
+*.pyc
+*.egg-info
+.vscode
+
+weights
+outputs/
+scripts/env.sh
+scripts/run_test.sh
+configs/instructdet_test.yaml
+logs/

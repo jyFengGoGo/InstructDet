@@ -1,0 +1,4 @@
+Objects and their descriptions:
+## object 2: car next to the bench, object on right side of image, parked car on right side, object next to bench, car that is not the white car, thing on right side, car on the right side of the image, blue vehicle, car on right, blue car right, blue car
+## object 3: car in front of the bench, car on the left side of the image, white vehicle, object on left side of image, thing on left, car on left, object on far left, car that is not the blue car, parked car on left side, white car left, left car, white car
+Please find an summerize the similar properties of given objects.

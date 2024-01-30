@@ -1,0 +1,4 @@
+Objects and their descriptions:
+## object 0: person on the leftmost side, person standing in the left side, person standing in the left extreme, person at the leftmost position, person standing far left, person in the first position, leftmost person, person at the far left, person standing in the middle of the line, person standing at the start of the line, person on the left side, left guy, far left person, left man
+## object 1: rightmost person, person standing on the right side of the image, person at the far right, person at the rightmost position, person standing far right, person on right, guy far right
+Please find an summerize the similar properties of given objects.

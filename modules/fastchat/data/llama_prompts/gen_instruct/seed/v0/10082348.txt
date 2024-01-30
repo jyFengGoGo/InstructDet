@@ -1,0 +1,12 @@
+A man with a baseball cap and black jacket stands in a bathroom while holding a coffee mug .
+A man is wearing a ball cap and holding a coffee cup between two urinals .
+a man is posing next to a urinal with a cup of coffee .
+A man holds a coffee cup while in the bathroom .
+A man standing at a urinal with a coffee cup .
+
+man: [0.17, 0.04, 0.89, 1.0]
+ball cap/baseball cap: [0.52, 0.03, 0.64, 0.14]
+black jacket: [0.24, 0.2, 0.9, 0.66]
+cup coffee/coffee cup/coffee mug: [0.55, 0.31, 0.69, 0.44]
+urinals: [0.08, 0.74, 0.93, 1.0]
+urinal: [0.11, 0.76, 0.4, 1.0]

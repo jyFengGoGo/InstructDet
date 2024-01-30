@@ -1,0 +1,2 @@
+Summary of common properties of given objects:
+## people on edges in image;

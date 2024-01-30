@@ -1,0 +1,14 @@
+A man with a goatee in a black shirt and white latex gloves is using a tattoo gun to place a tattoo on someone's back .
+A man is putting a tattoo on a another's man upper back .
+A man with a black shirt giving another man a tattoo .
+A man is putting tattoo on his back .
+A man getting a tattoo on his back .
+
+man: [0.14, 0.13, 1.0, 1.0]
+goatee: [0.41, 0.64, 0.5, 0.76]
+black shirt: [0.49, 0.55, 0.99, 0.99]
+white latex gloves: [0.13, 0.49, 0.33, 1.0]
+tattoo gun: [0.15, 0.4, 0.3, 0.7]
+tattoo: [0.09, 0.63, 0.2, 0.77]
+back/someone's back: [0.0, 0.54, 0.18, 1.0]
+another's man/man/another man: [0.01, 0.12, 0.3, 1.0]

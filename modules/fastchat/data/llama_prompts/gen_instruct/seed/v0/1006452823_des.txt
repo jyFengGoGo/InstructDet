@@ -1,0 +1,15 @@
+[2 kids/two kids/two children]
+(1) person, kids, children, two kids, childern learning, kids playing, kids sitting
+(2) 2 kids playing on a seesaw, Two kids sitting on a seesaw, children practicing their writing, a girl and a boy, two person on the teeter totter, kids by the sea
+[girl]
+(1) girl, kid on the left of the image, girl sitting, girl playing, the left kid, the left person
+(2) kid playing with the boy, kid sitting on the small seesaw, kid playing in the sand, girl reading a book, a friend of the boy on the right, the taller kid
+[boy]
+(1) boy, kid, kid on the right, the right kid, the right person, boy sitting, boy playing, boy practicing his writing
+(2) kid playing with the girl, boy sitting on a teeter totter, a friend of the girl on the left, boy playing in the sand
+[seesaw/small seesaw/teeter totter]
+(1) small seesaw, teeter totter, item to be played on, common facilities in parks and playground, game of two people
+(2) seesaw in the sand, item the kids are sitting on, item the girl is sitting on, item the boy is playing on
+[sand]
+(1) item common by the sea, the background of the scene
+(2) item on which the seesaw is placed, item on which the kids are standing

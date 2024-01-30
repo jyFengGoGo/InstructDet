@@ -1,0 +1,4 @@
+Objects and their descriptions:
+## object 2: person standing next to the person in the center, person standing next to the center person, person wearing black pants and teal jacket, person standing on the left side, person wearing a teal jacket, person in black pants, second person from left, person second from left, man black pants teal jacket
+## object 3: person in the middle of the group, person in a green jacket, person in black and green jacket, person standing in the middle of the group, person in the center of the group, person wearing a black and green jacket, center person, center dude, middle person in black and green jacket
+Please find an summerize the similar properties of given objects.

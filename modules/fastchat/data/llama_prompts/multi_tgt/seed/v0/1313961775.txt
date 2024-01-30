@@ -1,0 +1,4 @@
+Objects and their descriptions:
+## object 0: girl, little girl, water, lake, young girl
+## object 1: floating device, bulky red life jacket, life vest, life jacket
+Please find an summerize the similar properties of given objects.

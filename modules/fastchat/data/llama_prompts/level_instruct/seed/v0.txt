@@ -1,0 +1,21 @@
+pencil|This description is a single noun giving what the object is, so the level of this description is: level 0.
+person who is standing on the right side of the image|This description gives the location in image of the person. Location in image of object is a simple attribute, so the level of this description is: level 1.
+the plane is white|This description gives the color of the plane, color of object is simple attribute, so the level of this description is: level 1.
+thing the boy is looking at|This descrition is referring to an object by describing its relationship with the boy. This is a comprehensive description including relationship with another object, so the level of this description is: level 2.
+kid sitting|This short phrase describes an action of the kid. Simple description of object action belongs to level 1, so the level of this description is: level 1.
+a girl sitting indian style in the middle , wearing a white and blue striped sweater|This description gives the girl's location in image, detailed pose, and colors of her clothes. This is a long and detailed description with verbs, nouns and abjectives, so the level is: level 3.
+bikes|This description is a noun telling the common name of the object, so the level of this description is: level 0.
+item with a similar color to the green bucket|This description describes color attribute of an object by referring to color of another object. Having similar color with another object is a kind of relationship, so the level of this description is: level 2.
+red car|This short phrase gives the name and color of the object. Color only is a simple attribute, so level of this descrition is: level 1.
+man on right|This phrase gives the object's name and location in image, the level is: level 1.
+people who are sitting under an umbrella|This phrase is referring to the object of people, and gives simple object action of sitting and object relationship with the umbrella. The level of this description is: level 2.
+object for eating|This description gives the function or purpose of the object only, so the level is: level 1.
+Two people are demonstrating martial arts to a crowd and jumping over three youngsters who are crouched on the mat|The main object in this description is people. The description gives the count of objects, the detailed action of objects, and object relationships with several other objects. And even describes some attributes of other objects. This is a long and affluent description with a lot of info, so the level of this description is: level 3.
+scared giraffe|This short description gives the name and emotional state of the object. The level is: level 1.
+object the woman is pushing|This description refers to an object by describing its relationship with the woman, which is another object, so the level of this description is: level 2.
+city street|This short phrase simply gives the name of object, so the level is: level 0.
+a white cat having black hair on head sleeping hiding her face with another cat|This long phrase describes complicated attributes of the cat, it gives the detailed colors of the fur of the cat, the action of sleeping, and the relationship of hiding face with another cat. This is a very detailed description and uses a few nouns, verbs and abjectives. The level would be: level 3.
+lady in white|This phrase gives the color attribute of the lady's clothes, which is a simple attribute. The level is: level 1.
+object the homeless man is sitting on|This description gives the object's relationship with another object, the object is being sit on by a homeless man. So the level would be: level 2.
+the reflection of a cat|This phrase is a short yet very comprehensive description. It refers to a region in image, the region's relationship with the cat in image is reflection. The level of this description is: level 2.
+medical instrument|This word gives the general category that the object belongs to, so that one can tell the function of the object. So the level of this description is: level 1.

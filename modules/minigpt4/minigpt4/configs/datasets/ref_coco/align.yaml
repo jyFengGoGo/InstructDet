@@ -1,0 +1,5 @@
+datasets:
+  ref_coco_align:
+    data_type: images
+    build_info:
+      storage: /root/autodl-tmp/MiniGPT-4/data/ref_data/

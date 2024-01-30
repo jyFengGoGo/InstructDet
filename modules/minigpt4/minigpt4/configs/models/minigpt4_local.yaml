@@ -1,0 +1,38 @@
+model:
+  arch: mini_gpt4_local
+
+  # vit encoder
+  image_size: 224
+  drop_path_rate: 0
+  use_grad_checkpoint: False
+  vit_precision: "fp16"
+  freeze_vit: True
+  freeze_qformer: True
+  vit_model_path: weights/eva_vit_g.pth
+
+  # Q-Former
+  num_query_token: 32
+  q_former_model: weights/blip2_pretrained_flant5xxl.pth
+
+  # Vicuna
+  llama_model: weights/vicuna-13b-v0-merged/
+
+  # generation configs
+  prompt: ""
+
+  # tokenizer
+  tokenizer: weights/bert/bert-base-uncased/
+
+preprocess:
+    vis_processor:
+        train:
+          name: "blip2_image_train"
+          image_size: 224
+        eval:
+          name: "blip2_image_eval"
+          image_size: 224
+    text_processor:
+        train:
+          name: "blip_caption"
+        eval:
+          name: "blip_caption"

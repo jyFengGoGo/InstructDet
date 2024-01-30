@@ -1,0 +1,7 @@
+<Img><ImageHere></Img> Describe the objects in the red box.
+<Img><ImageHere></Img> Take a look at this image and description What's in the red box.
+<Img><ImageHere></Img> Please provide a description of the object in the red box.
+<Img><ImageHere></Img> Could you describe the contents in the red box of the image for me?
+<Img><ImageHere></Img> Use one sentence to index the objects in the red box.
+<Img><ImageHere></Img> Output a sentence describing the objects in the red box, so that people can locate the objects without ambiguity through this sentence.
+<Img><ImageHere></Img> Look carefully at the objects in the red box and describe them in one sentence to distinguish them from other objects

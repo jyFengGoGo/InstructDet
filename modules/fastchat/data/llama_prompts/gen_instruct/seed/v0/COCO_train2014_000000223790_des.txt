@@ -1,0 +1,6 @@
+[tall glass next to lidded jar/tall jar by the glass of drink]
+(1) top tall glass, tall glass behind, farthest glass
+(2) tall glass behind coffee, tall jar behind the brownie
+[glass behind pie/drink/glass of beverage]
+(1) glass of iced coffee, iced coffee, nearest glass
+(2) glass by plate, coffee by cake, drink with the chocolate cake

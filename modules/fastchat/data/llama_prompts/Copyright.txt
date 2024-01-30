@@ -1,0 +1,7 @@
+Notice: Files in this directory are modified by Jiangyan Feng.
+Copyright 2024 Jiangyan Feng.
+Licensed under the Creative Commons Attribution-NonCommercial International License, Version 4.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+https://creativecommons.org/licenses/by-nc/4.0/

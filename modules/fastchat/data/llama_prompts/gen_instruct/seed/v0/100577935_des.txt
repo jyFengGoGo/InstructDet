@@ -1,0 +1,24 @@
+[man]
+(1) tattoo artist, tatooist, the focus of this image, man facing to the left of the image, person drawing a tattoo, the right man
+(2) man with a goatee, man in a black shirt, man with white latex gloves, man holding a tattoo gun, man placing a tattoo on another man, man on the right, person with a goatee in a black shirt
+[goatee]
+(1) mustache
+(2) mustache of the man in black shirt, mustache of the tatooist, mustache the man on the right is wearing
+[black shirt]
+(1) cloth, item in black, shirt in black
+(2) shirt worn by the tattoist, shirt worn by man on the right, cloth worn by man holding a tatto gun, item worn by person with a goatee
+[white latex gloves]
+(1) gloves, latex gloves, white gloves, item in white, medical supplies
+(2) gloves worn by the tattoo artist, tattoo utensils
+[tattoo gun]
+(1) tattoo appliance, utensil for putting tattoo, item used to give tattoo
+(2) item held by the tatooist, object belongs to the man on the right, utensil drawing on the left man
+[tattoo]
+(1) pattern or design on people's skin
+(2) thing the left person comes for, item the tatooist is drawing, item on the left man's back, item the man in black shirt is drawing, place the tattoo artist is looking at
+[back/someone's back]
+(1) upper part of a body
+(2) back of the left man, skin the tatooist is working on, place to draw the tattoo, the focus of the man with a goatee
+[another's man/man/another man]
+(1) the man with no upper clothes, man faces to the left, the left man
+(2) man getting a tattoo, the man on left, person putting tattoo on his back, person the tatooist is serving

@@ -1,0 +1,76 @@
+meta_file: 
+    - data/labels/refcoco/refcoco-unc/llavainput_testA.json
+image_prefix: 
+    - data/images/coco/train2014
+outpath: outputs/refcoco/refcoco-unc/
+
+petrel_conf: ~/petreloss.conf
+
+with_caption: False # whether input meta with image caption, generate by vlm if not
+use_global_ppl: True # whether generate expressions by llm
+use_local_ppl: True # whether generate expressions by vlm
+find_inter: True # whether find intersection expressions among bboxes
+use_cluster: True # whether cluster bboxes by expressions
+use_conjunction: True # whether combine expressions by conjunction: "and" or ","
+use_group: True # whether leveling generated expressions
+
+llava_config:
+    model_path: weights/llava/llava_v1.5_13b/
+    model_base: ~
+    batch_size: 1
+    conv_mode: ~
+    hint: True
+    repeat: 1    # int, support infer repeat times and concat output captions
+    dump: False
+llama_config:
+    model_path: weights/llama/vicuna-13b-v1.3/
+    gpus: "0"
+    revision: "main"
+    device: "cuda"
+    num_gpus: 1
+    max_gpu_memory: ~
+    load_8bit: False
+    cpu_offloading: False
+    gptq_ckpt: ~
+    gptq_wbits: 16
+    gptq_groupsize: -1
+    gptq_act_order: False
+    conv_template: ~
+    repetition_penalty: 1.0
+    max_new_tokens: 1024
+    style: "simple"
+    debug: False
+    dump: False
+    tasks: # handcrafted prompts and in-context examples for tasks involving LLM
+        gen_instruct:
+            task_des: modules/fastchat/data/llama_prompts/gen_instruct/prompt/instruct.txt
+            seed_path: modules/fastchat/data/llama_prompts/gen_instruct/seed/v0
+            repeat: 1
+        multi_tgt:
+            task_des: modules/fastchat/data/llama_prompts/multi_tgt/prompt/instruct.txt
+            seed_path: modules/fastchat/data/llama_prompts/multi_tgt/seed/v0
+        level_instruct:
+            task_des: modules/fastchat/data/llama_prompts/level_instruct/prompt/instruct.txt
+            seed_path: modules/fastchat/data/llama_prompts/level_instruct/seed/v0.txt
+local_ppl_config:
+    type: "minigpt4"
+    single_only: True # whether only generate expression for single bbox
+    minigpt4:
+        cfg_path: modules/minigpt4/eval_configs/minigpt4_local_eval.yaml
+        prompt_txt: modules/minigpt4/prompts/refcoco_alignment.txt
+        red_replace_txt: modules/minigpt4/prompts/red_box_replace.txt
+        options:
+filter_config:
+    type: "CLIP"
+    CLIP:
+        model_path: weights/clip/ViT-B-32.pt # "ViT-B/32"
+        alpha: 2  # [1,2]
+        tlr: 1.5   # tolerance for generated expressions
+multi_object:
+    cluster:
+        type: "DBSCAN"
+        DBSCAN:
+            model_path: weights/bert/bert-base-uncased/
+            eps: 5  # DBSCAN parameter, this could vary a lot for different data, normally ~ [1.5, 8]
+    conjunction:
+        num_scale: [2, 3]  # number of instances combined by adding conjunction to expressions

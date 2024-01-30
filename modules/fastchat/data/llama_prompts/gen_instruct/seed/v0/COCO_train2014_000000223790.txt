@@ -1,0 +1,5 @@
+The image features a delicious piece of chocolate cake placed on a plate, accompanied by a fork on the left side. The cake is positioned near the center of the plate, with a few caramel drizzles adding to its presentation. A glass of iced coffee is situated next to the cake, creating a delightful dessert setting. The fork is placed neatly on the plate, ready for someone to dig in and enjoy the scrumptious treat.
+The image features a dining table with a delicious chocolate dessert, possibly a brownie, on a white plate. The plate is placed on the table next to a fork and a knife. In addition, there is a drink in a glass positioned nearby, accompanied by a spoon. The dessert and drink create an inviting scene for a person to enjoy a sweet treat while dining.
+
+tall glass next to lidded jar/tall jar by the glass of drink: [0.23, 0.0, 0.37, 0.28]
+glass behind pie/drink/glass of beverage: [0.42, 0.04, 0.68, 0.48]
