@@ -1,0 +1,3 @@
+[submodule "modules/instruct_filter/CLIP"]
+	path = modules/instruct_filter/CLIP
+	url = https://github.com/openai/CLIP.git
