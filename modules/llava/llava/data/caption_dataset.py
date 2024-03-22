@@ -18,7 +18,6 @@ try:
     import mc
 except ImportError:
     pass
-from petrel_client.client import Client
 from .image_reader import build_image_reader
 
 from llava.conversation import conv_templates, SeparatorStyle
@@ -65,25 +64,6 @@ class BaseDataset(Dataset):
         """
         raise NotImplementedError
 
-    def _init_memcached(self):
-        if not self.initialized:
-            server_list_config_file = "/mnt/cache/share/memcached_client/server_list.conf"
-            client_config_file = "/mnt/cache/share/memcached_client/client.conf"
-            self.mclient = mc.MemcachedClient.GetInstance(server_list_config_file, client_config_file)
-            self.initialized = True
-
-    def _init_petrel(self):
-        if not self.initialized:
-            # self.client = Client(enable_mc=True)
-            self.client = Client(conf_path=self.petrel_conf)
-            self.initialized = True
-
-    def _init_osg(self):
-        if not self.initialized:
-            from spring_sdk import OSG
-            self.osg_client = OSG(self.osg_server, secure=False)
-            self.initialized = True
-
     def read_file(self, meta_dict):
         if self.read_from == 'fake':
             if self.initialized:
@@ -91,23 +71,8 @@ class BaseDataset(Dataset):
             else:
                 filebytes = self.saved_filebytes = np.fromfile(meta_dict['filename'], dtype=np.uint8)
                 self.initialized = True
-        elif self.read_from == 'mc':
-            self._init_memcached()
-            value = mc.pyvector()
-            self.mclient.Get(meta_dict['filename'], value)
-            value_str = mc.ConvertBuffer(value)
-            filebytes = np.frombuffer(value_str.tobytes(), dtype=np.uint8)
-        elif self.read_from == 'petrel':
-            self._init_petrel()
-            value = self.client.get(meta_dict['filename'], update_cache=True)
-            value = memoryview(value)
-            filebytes = np.frombuffer(value, dtype=np.uint8)
         elif self.read_from == 'fs':
             filebytes = np.fromfile(meta_dict['filename'], dtype=np.uint8)
-        elif self.read_from == 'osg':
-            self._init_osg()
-            img_str = self.osg_client.get_object(meta_dict['bucket'], meta_dict['key'])
-            filebytes = np.fromstring(img_str, np.uint8)
         else:
             raise RuntimeError("unknown value for read_from: {}".format(self.read_from))
 
@@ -141,7 +106,7 @@ class CaptionDataset(BaseDataset):
         "{"filename": "n01440764/n01440764_10026.JPEG",
           "label": 0}"
     """
-    def __init__(self, root_dir, meta_file, image_processor, tokenizer, transform=None, read_from='petrel',
+    def __init__(self, root_dir, meta_file, image_processor, tokenizer, transform=None, read_from='fs',
                  evaluator=None, petrel_conf="", image_reader_type='pil', image_half=False, osg_server=None, color_space='RGB', quarys=None,
                  mm_use_im_start_end=True,
                  conv_mode="llava_v1", startidx=None, stride=None,

@@ -101,7 +101,7 @@ def describe_image(args):
         args.meta_file,
         image_processor,
         tokenizer,
-        read_from='petrel',
+        read_from=args.read_from,
         image_reader_type='pil',
         petrel_conf=args.petrel_conf if hasattr(args, "petrel_conf") else "~/petreloss.conf",
         image_half=True,

@@ -10,7 +10,7 @@ import numpy as np
 import io
 import argparse
 import random
-from petrel_client.client import Client
+import requests
 
 
 class CLIPFilter:
@@ -22,10 +22,10 @@ class CLIPFilter:
         self.load_model()
         self.initialized = False
 
-    def _init_petrel(self):
-        if not self.initialized:
-            self.client = Client(conf_path=self.config.petrel_conf)
-            self.initialized = True
+    # def _init_petrel(self):
+    #     if not self.initialized:
+    #         self.client = Client(conf_path=self.config.petrel_conf)
+    #         self.initialized = True
 
     def load_model(self):
         self.model, self.preprocess = clip.load(self.config.model_path, device=self.device)
@@ -34,15 +34,6 @@ class CLIPFilter:
         if image_file.startswith('http') or image_file.startswith('https'):
             response = requests.get(image_file)
             image = Image.open(BytesIO(response.content)).convert('RGB')
-        elif "s3://" in image_file:
-            if not self.initialized:
-                self._init_petrel()
-            value = self.client.get(image_file, update_cache=True)
-            value = memoryview(value)
-            filebytes = np.frombuffer(value, dtype=np.uint8)
-            buff = io.BytesIO(filebytes)
-            with Image.open(buff) as image:
-                image = image.convert('RGB')
         else:
             image = Image.open(image_file).convert('RGB')
         return image

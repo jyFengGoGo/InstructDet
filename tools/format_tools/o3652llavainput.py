@@ -1,8 +1,5 @@
 import os,json
-from petrel_client.client import Client
-from petrelbox.io import PetrelHelper
 from pycocotools.coco import COCO
-helper = PetrelHelper(conf_path="~/petreloss.conf")
 import time
 from collections import defaultdict
 from tqdm import tqdm
@@ -21,7 +18,8 @@ class COCOwraper(COCO):
         if not annotation_file == None:
             print('loading annotations into memory...')
             tic = time.time()
-            file_bytes = PetrelHelper.get_bytes(annotation_file)
+            # file_bytes = PetrelHelper.get_bytes(annotation_file)
+            file_bytes = open(annotation_file, 'r')
             dataset = json.loads(file_bytes)
             assert type(dataset)==dict, 'annotation file format {} not supported'.format(type(dataset))
             print('Done (t={:0.2f}s)'.format(time.time()- tic))
@@ -104,7 +102,7 @@ def build4llava(bbox_dic):
 
 if __name__=="__main__":
     infile = "data/labels/objects365/objects365_val.json"
-    outfile = "data/labels/objects365/llavainput_val.json""
+    outfile = "data/labels/objects365/llavainput_val.json"
     llava_dics = build4llava(load_refcoco_bbox_dic(infile))
     with open(outfile, 'w') as fw:
         for llava_dic in llava_dics:

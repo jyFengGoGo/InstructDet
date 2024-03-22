@@ -31,6 +31,7 @@ def update_lmm_config(cfg):
     cfg.llava_config.startidx = cfg.startidx
     cfg.llava_config.stride = cfg.stride
     cfg.llava_config.petrel_conf = cfg.petrel_conf
+    cfg.llava_config.read_from = cfg.read_from
 
 
 def update_llm_config(cfg, task=None):

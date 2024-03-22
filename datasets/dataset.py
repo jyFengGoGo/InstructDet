@@ -3,11 +3,6 @@ import numpy as np
 import random
 import torch
 from torch.utils.data import Dataset
-try:
-    import mc
-except ImportError:
-    pass
-from petrel_client.client import Client
 from .image_reader import build_image_reader
 
 from collections import defaultdict
@@ -46,24 +41,6 @@ class BaseDataset(Dataset):
         """
         raise NotImplementedError
 
-    def _init_memcached(self):
-        if not self.initialized:
-            server_list_config_file = "/mnt/cache/share/memcached_client/server_list.conf"
-            client_config_file = "/mnt/cache/share/memcached_client/client.conf"
-            self.mclient = mc.MemcachedClient.GetInstance(server_list_config_file, client_config_file)
-            self.initialized = True
-
-    def _init_petrel(self):
-        if not self.initialized:
-            self.client = Client(conf_path=self.petrel_conf)
-            self.initialized = True
-
-    def _init_osg(self):
-        if not self.initialized:
-            from spring_sdk import OSG
-            self.osg_client = OSG(self.osg_server, secure=False)
-            self.initialized = True
-
     def read_file(self, meta_dict):
         if self.read_from == 'fake':
             if self.initialized:
@@ -71,23 +48,8 @@ class BaseDataset(Dataset):
             else:
                 filebytes = self.saved_filebytes = np.fromfile(meta_dict['filename'], dtype=np.uint8)
                 self.initialized = True
-        elif self.read_from == 'mc':
-            self._init_memcached()
-            value = mc.pyvector()
-            self.mclient.Get(meta_dict['filename'], value)
-            value_str = mc.ConvertBuffer(value)
-            filebytes = np.frombuffer(value_str.tobytes(), dtype=np.uint8)
-        elif self.read_from == 'petrel':
-            self._init_petrel()
-            value = self.client.get(meta_dict['filename'], update_cache=True)
-            value = memoryview(value)
-            filebytes = np.frombuffer(value, dtype=np.uint8)
         elif self.read_from == 'fs':
             filebytes = np.fromfile(meta_dict['filename'], dtype=np.uint8)
-        elif self.read_from == 'osg':
-            self._init_osg()
-            img_str = self.osg_client.get_object(meta_dict['bucket'], meta_dict['key'])
-            filebytes = np.fromstring(img_str, np.uint8)
         else:
             raise RuntimeError("unknown value for read_from: {}".format(self.read_from))
 

@@ -4,7 +4,8 @@ image_prefix:
     - data/images/coco/train2014
 outpath: outputs/refcoco/refcoco-unc/
 
-petrel_conf: ~/petreloss.conf
+read_from: 'fs'
+petrel_conf:
 
 with_caption: False # whether input meta with image caption, generate by vlm if not
 use_global_ppl: True # whether generate expressions by llm
